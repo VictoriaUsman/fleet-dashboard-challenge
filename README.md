@@ -1,4 +1,3 @@
-<img width="1670" height="942" alt="image" src="https://github.com/user-attachments/assets/2b770629-afd0-4e5c-ad53-476e4e36f848" /># Fleet Dashboard Challenge
 
 A technical task for candidates applying to SolidGPS.
 
