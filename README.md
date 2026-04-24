@@ -8,7 +8,7 @@ A technical task for candidates applying to SolidGPS.
 
 **How I used AI to complete this task**
 
-I used Claude (Claude Code) as a pair programmer throughout. I gave it the README requirements and the CSV, and it wrote the initial Python script and HTML template. I reviewed the output, checked edge cases in the data (invalid coordinates, out-of-range battery values, a future timestamp, an undocumented `maintenance` status), and had Claude handle them gracefully rather than crash or silently skip them.
+I used Claude Google Gemini as a pair programmer throughout. I gave it the README requirements and the CSV, and it wrote the initial Python script and HTML template. I reviewed the output, checked edge cases in the data (invalid coordinates, out-of-range battery values, a future timestamp, an undocumented `maintenance` status), and had Gemini handle them gracefully rather than crash or silently skip them.
 
 **Colour/status logic**
 
