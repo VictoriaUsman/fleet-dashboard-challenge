@@ -4,6 +4,30 @@ A technical task for candidates applying to SolidGPS.
 
 ---
 
+## My Approach
+
+**How I used AI to complete this task**
+
+I used Claude (Claude Code) as a pair programmer throughout. I gave it the README requirements and the CSV, and it wrote the initial Python script and HTML template. I reviewed the output, checked edge cases in the data (invalid coordinates, out-of-range battery values, a future timestamp, an undocumented `maintenance` status), and had Claude handle them gracefully rather than crash or silently skip them.
+
+**Colour/status logic**
+
+| Status | Colour | Reasoning |
+|---|---|---|
+| Active | Green `#22c55e` | Universal "all good" signal |
+| Idle | Amber `#f59e0b` | Needs attention but not urgent |
+| Low Battery | Red `#ef4444` | Action required soon |
+| Offline | Grey `#6b7280` | Unknown/unreachable — muted to avoid alarm fatigue |
+| Maintenance | Blue `#3b82f6` | Intentionally out of service — distinct from a fault |
+
+Offline is grey rather than red because a device being offline isn't always an emergency (e.g. overnight parking), while low battery demands immediate attention before the device goes dark.
+
+**One thing I would add for a real product**
+
+A **live auto-refresh** — polling the backend every 60 seconds and updating marker positions and statuses without a full page reload. A fleet manager leaving the dashboard open all day needs it to stay current, not reflect a stale snapshot from when they first opened it.
+
+---
+
 ## The Task
 
 You have been given `fleet_status.csv` — a real-world snapshot of 30 GPS tracking devices currently in the field across Australia.
